@@ -33,7 +33,7 @@ in pkgs.mkShell {
 
     # .. others
     boost
-    docbook-xsl-ns
+    docbook_xsl
     doxygen
     gi-docgen
     git
@@ -79,8 +79,9 @@ in pkgs.mkShell {
     libraw
     libutempter
     xorg.libxcvt
-    libxmlb
-#     libxss
+    expat
+    libxml2
+    xorg.libX11 xorg.libXext xorg.libXft xorg.libXpm xorg.libXrandr xorg.libXScrnSaver # Replacement of libxss ?
     lmdb
     microsoft-gsl
     mlt
@@ -104,6 +105,7 @@ in pkgs.mkShell {
     vlc
     wayland
     wayland-protocols
+    wayland-scanner
     xapian
     xercesc
     xorg.xf86inputlibinput
@@ -143,4 +145,6 @@ in pkgs.mkShell {
     # kpipewire
     pipewire
   ];
+
+  strictDeps = true;
 }
